@@ -91,8 +91,7 @@ if [ ! -f "$dir/${lib}.txt" ]; then
         echo '-----------------------------------------------'
         mkdir -p $dir
         export PYTHONPATH=""
-        tombo resquiggle --basecall-group $basecall_group --overwrite $output/multi_to_single_fast5/$lib $transcripts --processes $threads --fit-global-scale --include-
-event-stde --ignore-read-locks --signal-matching-score 2
+        tombo resquiggle --basecall-group $basecall_group --overwrite $output/multi_to_single_fast5/$lib $transcripts --processes $threads --fit-global-scale --include-event-stde
         find $output/multi_to_single_fast5/$lib*/ -name "*.fast5" >$dir/$lib.txt
         echo "[`date`] Run complete for tombo resquiggle $lib"
         echo '-----------------------------------------------'
