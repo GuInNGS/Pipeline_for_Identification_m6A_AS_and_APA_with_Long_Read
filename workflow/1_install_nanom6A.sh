@@ -20,11 +20,11 @@ echo "[`date`] nanom6A INSTALL COMPLETE"
 
 
 ### install prapi
-# wget http://forestry.fafu.edu.cn/tool/PRAPI/prapi_env.yaml
-# conda env create -n prapi -f prapi_env.yaml
-# pip install -i https://pypi.anaconda.org/gaoyubang/simple splicegrapher 
-# or user can install prapi by:
 
-conda env create -n prapi_env -f prapi.yaml
+wget http://forestry.fafu.edu.cn/tool/PRAPI/prapi_env.yaml
+conda env create -f prapi_env.yaml 
+conda activate prapi_env 
+pip install -i https://pypi.anaconda.org/gaoyubang/simple splicegrapher 
+
 echo '---------------------------------'
 echo "[`date`] prapi INSTALL COMPLETE"
