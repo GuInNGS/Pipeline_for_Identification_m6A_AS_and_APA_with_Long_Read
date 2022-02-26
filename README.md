@@ -116,7 +116,7 @@ sh workflow/2_run_nanom6A.sh
 
 ### Usage for PRAPI
 
-#### Step 1: Identification of AS and APA 
+#### Identification of AS and APA 
 
 ```
 sh workflow/3_run_prapi.sh
