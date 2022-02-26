@@ -60,7 +60,7 @@ fi
 # for example : 
 # export PATH=/home/Sorata/miniconda3/envs/tombo/bin:$PATH
 
-conda activate tombo
+conda activate tombo_env
 
 dir=$output/multi_to_single_fast5
 if [ ! -d "$dir/$lib" ]; then
@@ -103,7 +103,7 @@ fi
 # for example : 
 # export PATH=/home/Sorata/miniconda3/envs/nanom6A/bin:$PATH
 
-conda activate nanom6A
+conda activate nanom6A_env
 
 dir=$output/extract_raw_and_feature
 if [ ! -f "$dir/${lib}.feature.tsv" ]; then
@@ -113,6 +113,9 @@ if [ ! -f "$dir/${lib}.feature.tsv" ]; then
         echo '-----------------------------------------------'
         mkdir -p $dir
         export PYTHONPATH=""
+        
+        # --chip reads first and last N base signal drop out, default:10.
+        
         extract_raw_and_feature_fast --cpu=$threads --fl=$output/tombo/"$lib".txt -o $dir/$lib --clip=10
         echo "[`date`] Run complete for extract_raw_and_feature for $dir/$lib"
         echo '-----------------------------------------------'
