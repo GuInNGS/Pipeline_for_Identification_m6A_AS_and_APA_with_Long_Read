@@ -89,6 +89,14 @@ Configuration file `conf.txt` can be edited by Vim text Editor in Linux system a
 
 ## Major steps
 
+### Install the dependence
+
+```
+sh workflow/1_install_environment.sh
+conda activate tombo_env
+pip install -i https://pypi.anaconda.org/gaoyubang/simple splicegrapher
+```
+
 ### Usage for Nanom6A
 
 #### Step 1: Download nanom6A package
@@ -97,13 +105,8 @@ Download nanom6A_2021_3_18.tar.gz package can be downloaded from following link:
 
 Make sure the package and the script in the same directory
 
-#### Step 2: Install the dependence
 
-```
-sh workflow/1_install_nanom6A.sh
-```
-
-#### Step 3: Identification of modified nucleotide using nanom6A
+#### Step 2: Identification of modified nucleotide using nanom6A
 
 ```
 sh workflow/2_run_nanom6A.sh
@@ -113,16 +116,10 @@ sh workflow/2_run_nanom6A.sh
 
 ### Usage for PRAPI
 
-#### Step 1: Download PRAPI package
+#### Step 1: Identification of AS and APA 
 
 ```
-sh workflow/3_install_prapi.sh
-```
-
-#### Step 2: Identification of AS and APA 
-
-```
-sh workflow/4_run_prapi.sh
+sh workflow/3_run_prapi.sh
 ```
 
 
