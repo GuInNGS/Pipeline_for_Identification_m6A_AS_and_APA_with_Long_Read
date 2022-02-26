@@ -93,7 +93,7 @@ Configuration file `conf.txt` can be edited by Vim text Editor in Linux system a
 
 ```
 sh workflow/1_install_environment.sh
-conda activate tombo_env
+conda activate prapi_env
 pip install -i https://pypi.anaconda.org/gaoyubang/simple splicegrapher
 ```
 
